@@ -2,18 +2,29 @@ let person =
 {
     fName : "Robbie" ,
     age : 19 ,
-    favouriteColour : "red"
+    favouriteColour : "red" , 
+    sayHello: function(fName)
+        {
+            console.log("Hello" + fName  + "!")
+        },
+    getAge: function() 
+    {
+        return person.age
+    }
 
 }
+//define global variable age
+const age = person.getAge()
+
 console.log(person)
-
 console.table(person)
-
-console.log(person.age)
+console.log(age) //output 19
+// use passed argument in callback function
+person.sayHello(" Sam")
 // add new property
-person.favourateFood = "pizza" , "french fry"
+person.favouriteFood = "pizza" , "french fry"
 
-console.log(person.favouriteFood) 
+console.log(person.favouriteFood, ) 
 // pizza , french fry
 
 let car = 
